@@ -25,7 +25,12 @@ namespace D_Roll {
 
         Random random = new Random();
 
-        private void RollButton_Click(object sender, RoutedEventArgs e) {
+        private async void RollButton_Click(object sender, RoutedEventArgs e) {
+            rollNumLabel.Content = ""; // Clear the roll value
+            rollButton.IsEnabled = false; // Disable the roll button to keep from spamming issues
+
+            await Task.Delay(250); // Pause before executing the roll
+
             XmlElement selectedDice = (XmlElement) diceSelectBox.SelectedItem;
             string diceValue = selectedDice.GetAttribute("Value");
 
@@ -50,7 +55,9 @@ namespace D_Roll {
             }
 
             Console.WriteLine("Rolled " + rollVal);
+
             rollNumLabel.Content = rollVal; // Display the value
+            rollButton.IsEnabled = true; // Enable the roll button
         }
 
         private void DiceSelectBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {

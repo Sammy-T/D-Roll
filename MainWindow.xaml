@@ -12,7 +12,10 @@
             <XmlDataProvider x:Key="DiceDataSource" XPath="DiceBag" Source="data/dice-list.xml" />
 
             <DataTemplate x:Key="diceItemTemplate">
-                <Label Content="{Binding XPath=@Name}" />
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding XPath=@Img}" Margin="0,0,20,0" />
+                    <Label Content="{Binding XPath=@Name}" />
+                </StackPanel>
             </DataTemplate>
         </Grid.Resources>
         

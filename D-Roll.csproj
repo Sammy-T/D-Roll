@@ -100,5 +100,13 @@
   <ItemGroup>
     <Resource Include="data\dice-list.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\dice-d10.png" />
+    <Resource Include="res\dice-d12.png" />
+    <Resource Include="res\dice-d20.png" />
+    <Resource Include="res\dice-d4.png" />
+    <Resource Include="res\dice-d6.png" />
+    <Resource Include="res\dice-d8.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

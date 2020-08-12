@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace D_Roll {
     /// <summary>
@@ -20,6 +21,36 @@ namespace D_Roll {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        Random random = new Random();
+
+        private void RollButton_Click(object sender, RoutedEventArgs e) {
+            XmlElement selectedDice = (XmlElement) diceSelectBox.SelectedItem;
+            string diceValue = selectedDice.GetAttribute("Value");
+
+            Console.WriteLine("Rolling a D" + diceValue);
+
+            int diceMaxVal;
+            int diceMinVal;
+
+            if (diceValue.Equals("%")) {
+                // Keep percentage random integers in the 0-9 range
+                diceMaxVal = 10;
+                diceMinVal = 0;
+            } else {
+                diceMaxVal = int.Parse(diceValue) + 1;
+                diceMinVal = 1;
+            }
+
+            int rollVal = random.Next(diceMinVal, diceMaxVal);
+
+            if (diceValue.Equals("%")) {
+                rollVal *= 10; // Multiply the percentage random integer to receive the 0-90(increment of 10) percentage 
+            }
+
+            Console.WriteLine("Rolled " + rollVal);
+            rollNumLabel.Content = rollVal; // Display the value
         }
     }
 }

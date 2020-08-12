@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DiceBag>
-  <Dice Name="D4" />
-  <Dice Name="D6" />
-  <Dice Name="D8" />
-  <Dice Name="D10" />
-  <Dice Name="D%" />
-  <Dice Name="D12" />
-  <Dice Name="D20" />
+  <Dice Name="D4" Value="4" />
+  <Dice Name="D6" Value="6" />
+  <Dice Name="D8" Value="8" />
+  <Dice Name="D10" Value="10" />
+  <Dice Name="D%" Value="%" />
+  <Dice Name="D12" Value="12" />
+  <Dice Name="D20" Value="20" />
 </DiceBag>

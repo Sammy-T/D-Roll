@@ -7,6 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <!-- Define the Grid layout -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- The display area -->
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Image Source="dd-dice-512.png" />
+            <Label Name="rollNumLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Content="0" />
+        </Grid>
+
+        <!-- The roll area -->
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center">Select which dice to roll</Label>
+            <ComboBox Name="diceSelectBox" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="0,10" HorizontalAlignment="Center" />
+            <Button Name="rollButton" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10,5">
+                Roll
+            </Button>
+        </Grid>
     </Grid>
 </Window>

@@ -95,9 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\dd-dice-512.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="data\dice-list.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +104,9 @@
     <Resource Include="res\dice-d4.png" />
     <Resource Include="res\dice-d6.png" />
     <Resource Include="res\dice-d8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\D-Roll.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

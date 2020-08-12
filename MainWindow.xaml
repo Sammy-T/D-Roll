@@ -30,8 +30,8 @@
 
         <!-- The display area -->
         <Grid Grid.Column="0" Grid.Row="0">
-            <Image Source="res/dd-dice-512.png" />
-            <Label Name="rollNumLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontWeight="Bold" />
+            <Image Source="res/D-Roll.png" />
+            <Label Name="rollNumLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontWeight="Bold" Foreground="White" />
         </Grid>
 
         <!-- The roll area -->

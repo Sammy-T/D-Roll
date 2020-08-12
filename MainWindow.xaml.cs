@@ -52,5 +52,9 @@ namespace D_Roll {
             Console.WriteLine("Rolled " + rollVal);
             rollNumLabel.Content = rollVal; // Display the value
         }
+
+        private void DiceSelectBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            rollNumLabel.Content = ""; // Clear the roll value when changing dice
+        }
     }
 }
